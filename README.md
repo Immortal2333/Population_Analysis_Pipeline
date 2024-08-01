@@ -11,7 +11,6 @@ The home page of "**Polygenic Basis Seedless Grapes**" can be accessed by clicki
 * VCF File
 
 **Dependency**
-
 The detials of all tools can be available in their **offical website** as followed and most of them can quickly install using [Anaconda](https://anaconda.org/):
 * [Fastp](https://github.com/OpenGene/fastp), [BWA](https://anaconda.org/bioconda/bwa), [GATK](https://anaconda.org/bioconda/gatk4), [GTX](www.gtxlab.com/product/cat), [Delly](https://anaconda.org/bioconda/delly)
 * [VCFtools](https://anaconda.org/bioconda/vcftools), [PLINK2.0](https://anaconda.org/bioconda/plink2)
@@ -85,6 +84,7 @@ perl VCF_addID.perl all_miss0.8GQ20maf0.0001.vcf all_miss0.8GQ20maf0.0001.id.vcf
 ```
 This **VCF file** `all_miss0.8GQ20maf0.0001.id.vcf` will be the core data for subsequent anlyses, such as polygenetic tree, PCA, admixture, IBD, pi, Fst statistics, introgression (fd statistics), PBScan, GWAS, and more. In this repository, we also provide the example files for plotting.
 The filter tool we used in this study is [PLINK2.0](https://anaconda.org/bioconda/plink2) and [VCFtools](https://anaconda.org/bioconda/vcftools).
+
 ## Polygenetic tree
 ```
 plink --vcf ./all_miss0.8GQ20maf0.0001.id.vcf \
