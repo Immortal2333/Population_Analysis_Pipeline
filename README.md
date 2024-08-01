@@ -3,6 +3,8 @@
 ![Author](https://img.shields.io/badge/Author-Xu.Wang-orange)
 ![Email](https://img.shields.io/badge/Email-571720850@qq.com-blue?)
 
+The home page of "**Polygenic Basis Seedless Grapes**" can be accessed by clicking [here](https://github.com/zhouyflab/Polygenic_Basis_Seedless_Grapes).
+
 ## Data preparation
 **Input Data**
 * WGS data: `.R1.fastq.gz` and `.R2.fastq.gz`
@@ -13,7 +15,7 @@
 The detials of all tools can be available in their **offical website** as followed and most of them can quickly install using [Anaconda](https://anaconda.org/):
 * [Fastp](https://github.com/OpenGene/fastp), [BWA](https://anaconda.org/bioconda/bwa), [GATK](https://anaconda.org/bioconda/gatk4), [GTX](www.gtxlab.com/product/cat), [Delly](https://anaconda.org/bioconda/delly)
 * [VCFtools](https://anaconda.org/bioconda/vcftools), [PLINK2.0](https://anaconda.org/bioconda/plink2)
-* [Admixture](https://anaconda.org/bioconda/admixture), [Cytoscape](https://cytoscape.org/)
+* [Admixture](https://anaconda.org/bioconda/admixture), [Cytoscape](https://cytoscape.org/), [general_genomics](https://github.com/simonhmartin/genomics_general), [PBScan](https://github.com/thamala/PBScan)
  
 ## Variant Calling
 ### [GTX](www.gtxlab.com/product/cat) (version 4.2.3.0) for SNPs and Indels
@@ -189,7 +191,7 @@ PI_HAT < 0.5 indicates a distant relative relationship.
 The visualization of IBD-PPI network using [Cytoscape](https://cytoscape.org/). GitHub: [https://github.com/cytoscape/cytoscape](https://github.com/cytoscape/cytoscape).
 
 ## Fst and pi statistics
-We should prepare the ID of two groups (VV, VVxVL) for calculation.
+We need to prepare the IDs of the two groups (VV and VVxVL) for population genetic calculations, with a single ID per line.
 
 ```
 # Fst
@@ -200,12 +202,15 @@ vcftools --vcf ./all_miss0.8GQ20maf0.0001.id.vcf --keep keep_VV35.txt --window-p
 vcftools --vcf ./all_miss0.8GQ20maf0.0001.id.vcf --keep keep_VVVL11.txt --window-pi 20000 --window-pi-step 20000 --out pi.keep_VVVL11.txt
 ```
 
+## fd statistic and Population branch statistic (PBS)
+We used `general_genomics` and `PBScan` tool for introgression analysis, with 20 kb and 50 SNP per window size, respectively.
 
+See detial in their offical GitHub: [https://github.com/simonhmartin/genomics_general](https://github.com/simonhmartin/genomics_general), [https://github.com/thamala/PBScan](https://github.com/thamala/PBScan)
 
+# Code availability and Citation
+All scripts could be found in this repository above. If you have any question, please do not hesitate contact us. Xu Wang: 571720850@qq.com
 
-
-
-
+Wang, Xu, et al. "Integrative genomics reveals the polygenic basis of seedlessness in grapevine" ***Current Biology*** (2024). doi: [https://doi.org/10.1016/j.cub.2024.07.022](https://doi.org/10.1016/j.cub.2024.07.022)
 
 
 
