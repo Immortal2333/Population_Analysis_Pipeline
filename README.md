@@ -1,4 +1,4 @@
-# Population Genetics Analysis Pipeline
+# Population Genetic Analysis Pipeline
 ![Update](https://img.shields.io/badge/Update-31/07/2024-green?logo=github)
 ![Author](https://img.shields.io/badge/Author-Xu.Wang-orange)
 ![Email](https://img.shields.io/badge/Email-571720850@qq.com-blue?)
